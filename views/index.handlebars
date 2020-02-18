@@ -1,1 +1,36 @@
-<div class="row"></div>
+<div class="row">
+    <div class="col-sm-4">
+        {{#each burgers}}
+        {{#unless devoured}}
+        <span> burgerName: {{burger_name}}
+            <button class="devouredBtn" data-id="{{id}}">devoured</button>
+        </span>  <br>
+        {{/unless}}
+        {{/each}}
+
+
+    </div>
+    <div class="col-sm-4">
+       middleSection
+
+    </div>
+    <div class="col-sm-4">
+        {{#each burgers}} 
+          {{#if devoured}}
+ <span>devoured burger: {{burger_name}}
+          
+        </span>
+
+          {{/if}}
+       {{/each}}
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <input type="text" id="burgerName">
+        <button id="addBurger">add burger</button>
+    </div>
+</div>
