@@ -10,4 +10,17 @@ $("#addBurger").on("click",function(){
     }).then(function(data){
         location.reload()
     })
+
+
+})
+
+
+$(".devouredBtn").on("click",function(){
+    var id = $(this).attr("data-id")
+    $.ajax({
+        url:"api/burgers/"+id,
+        method:"PUT"
+    }).then(function(){
+        location.reload()
+    })
 })

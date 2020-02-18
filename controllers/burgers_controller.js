@@ -13,5 +13,12 @@ function burger_controller(app){
       res.json(data)
     })
   })
+  app.put ("/api/burgers/:id",function(req,res){
+    var devoured = true
+    var id = req.params.id
+    burgers.updateOne (devoured,id,function(data){
+      res.json (data)
+    })
+  })
 }
 module.exports = burger_controller

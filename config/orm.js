@@ -15,6 +15,12 @@ var orm = {
         } )
 
         console.log(statement.sql)
+    } ,
+    updateOne:function(tableName, columns, values, modelCallback){
+    var statement =     connection.query("update ?? set ?? = ? where ?? = ?", [tableName,columns[0],values[0],columns[1],values[1]],function(err,data){
+            modelCallback(data)
+        })
+        console.log(statement.sql)
     }
 }
 
