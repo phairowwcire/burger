@@ -4,13 +4,13 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #523f1793;
+  background-color: #af7800b4;
 }
 
 #menu {
   height: 100%;
   position: fixed;
-  background-color: #b8963f;
+  background-color: #af7d00;
   width: 300px;
   transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateX(-100%);
