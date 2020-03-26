@@ -1,69 +1,27 @@
-<!doctype html>
-<html lang="en-us">
-
-<head>
-    <meta charset="UTF-8">
-    <title>BurgerTyme</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>
-
-    <header id="masthead">
-        <div class="container">
-          
-            <nav>
-              
-            </nav>
-        </div>
-    </header>
-
-    <div id="main-container" class="container">
-        <section class="main-section">
-          
-
-         
-            <p>
-
-        </section>
-
-    </div>
-
-    <footer>
-        <div class="container">
-            Copyright &copy;
-            2019
-        </div>
-    </footer>
-</body>
-
-</html>
-
-
 <div class="row">
     <div class="col-sm-4">
         {{#each burgers}}
         {{#unless devoured}}
         <span> burgerName: {{burger_name}}
             <button class="devouredBtn" data-id="{{id}}">devoured</button>
-        </span>  <br>
+        </span> <br>
         {{/unless}}
         {{/each}}
 
 
     </div>
     <div class="col-sm-4">
-     <img src="https://media.farandwide.com/fd/c1/fdc19e71f53540538473924523b188c1.jpg" class="image" alt="">
+        <img src="https://media.farandwide.com/fd/c1/fdc19e71f53540538473924523b188c1.jpg" class="image" alt="">
     </div>
     <div class="col-sm-4">
-        {{#each burgers}} 
-          {{#if devoured}}
- <span>devoured burger: {{burger_name}} <br>
-          
+        {{#each burgers}}
+        {{#if devoured}}
+        <span>devoured burger: {{burger_name}} <br>
+
         </span>
 
-          {{/if}}
-       {{/each}}
+        {{/if}}
+        {{/each}}
 
     </div>
 </div>
